@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A testimonial slider from Frontend Mentor for coding bootcamp users."
+    />
+    <meta
+      name="keywords"
+      content="slider, testimonial, frontend mentor, coding bootcamp, web development"
+    />
 
     <link
       rel="icon"
@@ -24,7 +32,12 @@
   <body>
     <div class="container">
       <section class="slider">
-        <div class="slider__slider-container">
+        <!-- Slide 1 -->
+        <div
+          class="slider__slider-container"
+          role="region"
+          aria-label="Testimonial Slide 1"
+        >
           <div class="testimonial">
             <blockquote class="testimonial__quote">
               <p>
@@ -47,8 +60,38 @@
           </div>
         </div>
 
+        <!-- Slide 2 -->
+        <div
+          class="slider__slider-container"
+          role="region"
+          aria-label="Testimonial Slide 2"
+        >
+          <div class="testimonial">
+            <blockquote class="testimonial__quote">
+              <p>
+                “ If you want to lay the best foundation possible I’d recommend
+                taking this course. The depth the instructors go into is
+                incredible. I now feel so confident about starting up as a
+                professional developer. ”
+              </p>
+            </blockquote>
+            <div class="testimonial__author">
+              <p>John Tarkpor <span>Junior Front-end Developer</span></p>
+            </div>
+          </div>
+
+          <div class="image">
+            <img
+              src="./assets/images/image-john.jpg"
+              alt="A man with short hair"
+              class="image__person"
+            />
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
         <div class="slider__btn-container">
-          <div class="left-arrow-container">
+          <div class="left-arrow-container" aria-label="Previous testimonial">
             <img
               src="./assets/images/icon-prev.svg"
               alt="Previous testimonial"
@@ -56,7 +99,7 @@
             />
           </div>
 
-          <div class="right-arrow-container">
+          <div class="right-arrow-container" aria-label="Next testimonial">
             <img
               src="./assets/images/icon-prev.svg"
               alt="Next testimonial"

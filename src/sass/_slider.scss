@@ -14,11 +14,6 @@
     align-items: center;
     align-items: center;
 
-    background: url("../../assets/images/pattern-bg.svg");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 80% 50%;
-
     @include transition-normal;
   }
 
@@ -32,7 +27,7 @@
     top: 85%;
     transform: translateY(-50%);
 
-    box-shadow: 0px 0.2rem 2rem rgba(32, 32, 70, 0.2);
+    box-shadow: $box-shadow;
 
     background-color: #fff;
 
@@ -78,7 +73,7 @@
     display: block;
     background: url("../../assets/images/pattern-quotes.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
 
     top: -22%;
     left: 5.5rem;
@@ -103,9 +98,26 @@
 .image {
   height: 30rem;
   scale: 1.2;
+  position: relative;
 
+  &::after {
+    z-index: -1;
+    content: "";
+    width: 39.2rem;
+    height: 55rem;
+    display: block;
+    position: absolute;
+    top: -3.8rem;
+    left: -3.9rem;
+
+    background: url("../../assets/images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
   &__person {
     height: 100%;
     display: block;
+    box-shadow: $box-shadow;
+    border-radius: 0.3rem;
   }
 }

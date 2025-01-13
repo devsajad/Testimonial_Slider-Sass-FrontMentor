@@ -11,24 +11,20 @@ $font-weight-bold: 700;
 $margin-vertical-container: 8.5rem;
 $margin-horizental-container: 13rem;
 
+$box-shadow: 0px 10px 26px -4px rgba(0, 0, 0, 0.1);
+
 @mixin transition-normal {
   transition: all 0.5s;
 }
 
 @mixin media-x-small {
-  @media screen and (max-width: 450px), (max-width: 795px) {
-    @content;
-  }
-}
-
-@mixin media-small {
-  @media screen and (max-width: 795px) {
+  @media screen and (max-width: 49.68em) {
     @content;
   }
 }
 
 @mixin media-medium {
-  @media screen and (max-width: 918px) {
+  @media screen and (max-width: 60.48em) {
     @content;
   }
 }
