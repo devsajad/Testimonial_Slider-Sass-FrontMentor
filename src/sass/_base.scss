@@ -12,11 +12,23 @@ $margin-vertical-container: 8.5rem;
 $margin-horizental-container: 13rem;
 
 @mixin transition-normal {
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
-@mixin media-general {
-  @media screen and (max-width: 63em) {
+@mixin media-x-small {
+  @media screen and (max-width: 450px), (max-width: 795px) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media screen and (max-width: 795px) {
+    @content;
+  }
+}
+
+@mixin media-medium {
+  @media screen and (max-width: 918px) {
     @content;
   }
 }
@@ -48,27 +60,14 @@ body {
   align-items: center;
 }
 
-.testimonial-container {
+.container {
   background-color: #fff;
 
   width: calc(68rem + $margin-horizental-container * 2);
   height: calc(34rem + $margin-vertical-container * 2);
 
-  //   background: url("../../assets/images/bg-pattern-desktop.svg"), white;
-  //   background-repeat: no-repeat;
-  //   background-size: 100%;
-  //   background-position: -400px -224px;
-}
-
-// a {
-//   //   color: $color-grey-light-1;
-//   text-decoration: none;
-//   &:hover {
-//     // color: $color-primary;
-//   }
-//   @include transition-normal;
-// }
-
-li {
-  list-style: none;
+  background: url("../../assets/images/pattern-curve.svg"), white;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 0px 100%;
 }

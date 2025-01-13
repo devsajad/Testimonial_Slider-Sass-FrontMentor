@@ -1,16 +1,16 @@
-const slides = document.querySelectorAll(".slider");
+const slides = document.querySelectorAll(".slider__slider-container");
 const leftArrow = document.querySelector(".left-arrow-container");
 const rightArrow = document.querySelector(".right-arrow-container");
 
 let curSlide = 0;
 let maxSlide = slides.length;
 
-function goToSlide(slide) {
+const goToSlide = function (slide) {
   slides.forEach(
-    (s, i) => (s.style.transform = `translate(${100 * (i - slide)}%`)
+    (s, i) =>
+      (s.style.transform = `translate(${100 * (i - slide)}% , ${100 * -i}%)`)
   );
-}
-
+};
 function nextSlide() {
   if (curSlide + 1 === maxSlide) curSlide = 0;
   else curSlide++;
