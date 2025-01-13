@@ -1,0 +1,74 @@
+// Color variables
+$color-dark-blue: rgb(32, 32, 70);
+$color-grayish-blue: hsl(240, 18%, 77%);
+$color-background: #f0f0f0;
+
+// Font size Variables
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$margin-vertical-container: 8.5rem;
+$margin-horizental-container: 13rem;
+
+@mixin transition-normal {
+  transition: all 0.3s;
+}
+
+@mixin media-general {
+  @media screen and (max-width: 63em) {
+    @content;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-background;
+
+  font-size: 1.8rem;
+  font-family: "Inter", serif;
+  font-weight: $font-weight-light;
+  color: $color-dark-blue;
+  line-height: 1;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  background-color: #fff;
+
+  width: calc(68rem + $margin-horizental-container * 2);
+  height: calc(34rem + $margin-vertical-container * 2);
+
+  //   background: url("../../assets/images/bg-pattern-desktop.svg"), white;
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   background-position: -400px -224px;
+}
+
+// a {
+//   //   color: $color-grey-light-1;
+//   text-decoration: none;
+//   &:hover {
+//     // color: $color-primary;
+//   }
+//   @include transition-normal;
+// }
+
+li {
+  list-style: none;
+}
